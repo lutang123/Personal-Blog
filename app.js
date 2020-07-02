@@ -19,7 +19,7 @@ app.use(express.static("public"));
 // mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
 
 
-mongoose.connect('mongodb+srv://blogUser:0629*Salu@cluster0-igwj0.mongodb.net/blogDB', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://blogUser:0629*Salu@cluster0.euzh6.mongodb.net/blogDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 const postSchema = {
   title: String,
