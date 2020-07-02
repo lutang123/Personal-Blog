@@ -75,6 +75,14 @@ app.get("/contact", function(req, res){
 });
 
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+// app.listen(3000, function() {
+//   console.log("Server started on port 3000");
+// });
+
+let port = process.env.port
+if (port = null || port == "") {
+  port = 3000
+}
+app.listen(port, function() {
+  console.log("server is running on Heroku or port 3000")
 });
